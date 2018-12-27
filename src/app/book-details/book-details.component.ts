@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Book } from '../shared/book';
 
 @Component({
   selector: 'bm-book-details',
   templateUrl: './book-details.component.html',
   styles: []
 })
-export class BookDetailsComponent implements OnInit {
+export class BookDetailsComponent {
 
-  constructor() { }
+  @Input() book: Book;
 
-  ngOnInit() {
+  getRating(num: number) {
+    return new Array(num);
+  }
+
   }
 
 }
