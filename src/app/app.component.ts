@@ -7,7 +7,6 @@ import { Book } from './shared/book';
   styles: []
 })
 export class AppComponent {
-  title = 'BookMonkey';
   listOn = true;
   detailsOn = false;
   book: Book;
