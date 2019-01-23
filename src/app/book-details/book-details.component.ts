@@ -1,5 +1,4 @@
-
-import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { Book } from '../shared/book';
 import { BookStoreService } from './../shared/book-store.service';
@@ -17,7 +16,7 @@ export class BookDetailsComponent implements OnInit {
 
   ngOnInit() {
     const params = this.route.snapshot.params; // read url params
-    this.book = this.bs.getSingle(params['isbn']);
+    this.bs.getSingle(params['isbn']).subscribe(b => (this.book = b));
   }
 
   getRating(num: number) {
