@@ -11,13 +11,9 @@ import { ActivatedRoute } from '@angular/router';
   styles: []
 })
 export class BookDetailsComponent implements OnInit {
-
   book: Book;
 
-  constructor(
-    private bs: BookStoreService,
-    private route: ActivatedRoute
-  ) {}
+  constructor(private bs: BookStoreService, private route: ActivatedRoute) {}
 
   ngOnInit() {
     const params = this.route.snapshot.params; // read url params
@@ -27,5 +23,4 @@ export class BookDetailsComponent implements OnInit {
   getRating(num: number) {
     return new Array(num);
   }
-
 }

@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BookListComponent } from './book-list/book-list.component';
@@ -17,13 +16,8 @@ import { HomeComponent } from './home/home.component';
     BookDetailsComponent,
     HomeComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [
-    BookStoreService
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  providers: [BookStoreService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
