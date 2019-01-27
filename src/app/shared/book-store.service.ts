@@ -8,7 +8,6 @@ import { throwError } from 'rxjs';
 import { Book } from './book';
 import { BookRaw } from './book-raw';
 import { BookFactory } from './book-factory';
-import { pipe } from '@angular/core/src/render3';
 
 @Injectable({
   providedIn: 'root'
